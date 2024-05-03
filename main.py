@@ -10,6 +10,8 @@ class Game:
         self.clock = pygame.time.Clock()
 
         self.world_screen = World()
+
+        self.tmx_data = load_pygame('Assets/tmx/basic.tmx')
         
 
 
@@ -22,6 +24,9 @@ class Game:
 
 
             self.world_screen.run(fps)
+            print(self.tmx_data)
+
+
 
             pygame.display.update()
 

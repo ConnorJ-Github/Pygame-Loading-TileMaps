@@ -1,5 +1,6 @@
 import pygame
 from pygame.math import Vector2 as vector
+from pytmx.util_pygame import load_pygame
 
 FPS = 60 #Window FPS
 
