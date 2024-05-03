@@ -9,6 +9,7 @@ class Tiles(pygame.sprite.Sprite):
 
     def load_layers(self):
 
+        #Loads tile layers
         for layer in self.tmx_data.visible_layers:
             # if layer.name in ('Platforms','Small Trees','Big Trees', 'Rocks'): #Use when you only want to show a selected range of layers
             if hasattr(layer,'data'): #Use to collect every layer
@@ -17,7 +18,7 @@ class Tiles(pygame.sprite.Sprite):
                     LoadTile(pos = pos, surface = surf, groups = self.sprite_group)
                 # print(layer)
 
-
+                
     def draw(self, display):
         #print(self.tmx_data.layernames)
         self.load_layers()
